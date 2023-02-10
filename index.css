@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+}
+.d_flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.base_box {
+  background-color: gray;
+  width: 40%;
+  margin: auto;
+  height: 200px;overflow: hidden;
+}
+.box {
+  width: 98%;
+  margin: auto;
+  background-color: red;
+  height: 195px;
+  transition: transform 0.5s linear 1s;
+
+}
+.box:hover {
+  background-color: aqua;
+  /* transform: scaleX(1.5); */
+  transform: translate(-50px, 50px);
+  /* transform: translateX(50px); */
+  /* transform: skewY(20deg); */
+  /* transform: rotateZ(300deg); */
+}
+
+.bg_box_con {
+  position: relative;
+}
+.bg_box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border: 2px solid slategray;
+  animation-name: box;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 5s;
+  position: relative;
+}
+
+@keyframes box {
+  0% {
+    left: 0px;
+    right: 0px;
+    background-color: blue;
+  }
+  25% {
+    left: 50px;
+    top: 0px;
+    background-color: aqua;
+  }
+  50% {
+    left: 50px;
+    top: 50px;
+    background-color: darkgreen;
+  }
+  75% {
+    left: 0px;
+    top: 50px;
+    background-color: orange;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+    background-color: purple;
+  }
+}
+
+.spin {
+  background-color: whitesmoke;
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+  margin-top: 100px;
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+}
+.spin div {
+  width: 90px;
+  height: 90px;
+  border: 5px solid dodgerblue;
+  border-top-color: white;
+  border-radius: 50%;
+}
+
+
+@keyframes spinner {
+	to{
+	transform: rotate(360deg);
+}
+}
